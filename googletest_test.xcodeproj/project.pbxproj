@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		68F5C2EB231FDF0A0009F448 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68F5C2EA231FDF0A0009F448 /* main.cpp */; };
+		68263258231FF1F600DB33D0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68F5C2EA231FDF0A0009F448 /* main.cpp */; };
+		682A45A3231FED7F0076367C /* Unit_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 682A45A2231FED7F0076367C /* Unit_Test.m */; };
+		682A45AB231FEE160076367C /* GoogleTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 682A45AA231FEE160076367C /* GoogleTests.mm */; };
+		682A45AC231FEFB90076367C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68F5C2EA231FDF0A0009F448 /* main.cpp */; };
+		682A45AE231FF0960076367C /* libgtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F5C2F2231FE35E0009F448 /* libgtest.a */; };
+		682A45AF231FF0960076367C /* libgtest_main.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F5C2F4231FE3700009F448 /* libgtest_main.a */; };
+		68F5C2F3231FE35E0009F448 /* libgtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F5C2F2231FE35E0009F448 /* libgtest.a */; };
+		68F5C2F5231FE3700009F448 /* libgtest_main.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F5C2F4231FE3700009F448 /* libgtest_main.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,26 +30,63 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		682A4594231FED3E0076367C /* google_test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = google_test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		682A45A0231FED7F0076367C /* Unit Test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Test.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		682A45A2231FED7F0076367C /* Unit_Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Unit_Test.m; sourceTree = "<group>"; };
+		682A45A4231FED7F0076367C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		682A45AA231FEE160076367C /* GoogleTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GoogleTests.mm; sourceTree = "<group>"; };
 		68F5C2E7231FDF0A0009F448 /* googletest_test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = googletest_test; sourceTree = BUILT_PRODUCTS_DIR; };
 		68F5C2EA231FDF0A0009F448 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		68F5C2F2231FE35E0009F448 /* libgtest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgtest.a; path = ../../CLionProjects/GoogleTest/googletest/build/lib/libgtest.a; sourceTree = "<group>"; };
+		68F5C2F4231FE3700009F448 /* libgtest_main.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgtest_main.a; path = ../../CLionProjects/GoogleTest/googletest/build/lib/libgtest_main.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		68F5C2E4231FDF0A0009F448 /* Frameworks */ = {
+		682A4591231FED3E0076367C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		682A459D231FED7F0076367C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				682A45AE231FF0960076367C /* libgtest.a in Frameworks */,
+				682A45AF231FF0960076367C /* libgtest_main.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68F5C2E4231FDF0A0009F448 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68F5C2F5231FE3700009F448 /* libgtest_main.a in Frameworks */,
+				68F5C2F3231FE35E0009F448 /* libgtest.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		682A45A1231FED7F0076367C /* Unit Test */ = {
+			isa = PBXGroup;
+			children = (
+				682A45AA231FEE160076367C /* GoogleTests.mm */,
+				682A45A2231FED7F0076367C /* Unit_Test.m */,
+				682A45A4231FED7F0076367C /* Info.plist */,
+			);
+			path = "Unit Test";
+			sourceTree = "<group>";
+		};
 		68F5C2DE231FDF0A0009F448 = {
 			isa = PBXGroup;
 			children = (
 				68F5C2E9231FDF0A0009F448 /* googletest_test */,
+				682A45A1231FED7F0076367C /* Unit Test */,
 				68F5C2E8231FDF0A0009F448 /* Products */,
+				68F5C2F1231FE35E0009F448 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -50,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				68F5C2E7231FDF0A0009F448 /* googletest_test */,
+				682A4594231FED3E0076367C /* google_test.xctest */,
+				682A45A0231FED7F0076367C /* Unit Test.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,9 +108,52 @@
 			path = googletest_test;
 			sourceTree = "<group>";
 		};
+		68F5C2F1231FE35E0009F448 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				68F5C2F4231FE3700009F448 /* libgtest_main.a */,
+				68F5C2F2231FE35E0009F448 /* libgtest.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		682A4593231FED3E0076367C /* google_test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 682A4599231FED3E0076367C /* Build configuration list for PBXNativeTarget "google_test" */;
+			buildPhases = (
+				682A4590231FED3E0076367C /* Sources */,
+				682A4591231FED3E0076367C /* Frameworks */,
+				682A4592231FED3E0076367C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = google_test;
+			productName = google_test;
+			productReference = 682A4594231FED3E0076367C /* google_test.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		682A459F231FED7F0076367C /* Unit Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 682A45A5231FED7F0076367C /* Build configuration list for PBXNativeTarget "Unit Test" */;
+			buildPhases = (
+				682A459C231FED7F0076367C /* Sources */,
+				682A459D231FED7F0076367C /* Frameworks */,
+				682A459E231FED7F0076367C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Unit Test";
+			productName = "Unit Test";
+			productReference = 682A45A0231FED7F0076367C /* Unit Test.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		68F5C2E6231FDF0A0009F448 /* googletest_test */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68F5C2EE231FDF0A0009F448 /* Build configuration list for PBXNativeTarget "googletest_test" */;
@@ -91,6 +180,12 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Trebing, Peter";
 				TargetAttributes = {
+					682A4593231FED3E0076367C = {
+						CreatedOnToolsVersion = 10.2;
+					};
+					682A459F231FED7F0076367C = {
+						CreatedOnToolsVersion = 10.2;
+					};
 					68F5C2E6231FDF0A0009F448 = {
 						CreatedOnToolsVersion = 10.2;
 					};
@@ -109,22 +204,122 @@
 			projectRoot = "";
 			targets = (
 				68F5C2E6231FDF0A0009F448 /* googletest_test */,
+				682A4593231FED3E0076367C /* google_test */,
+				682A459F231FED7F0076367C /* Unit Test */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		682A4592231FED3E0076367C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		682A459E231FED7F0076367C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		682A4590231FED3E0076367C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		682A459C231FED7F0076367C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				682A45AB231FEE160076367C /* GoogleTests.mm in Sources */,
+				682A45A3231FED7F0076367C /* Unit_Test.m in Sources */,
+				682A45AC231FEFB90076367C /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		68F5C2E3231FDF0A0009F448 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68F5C2EB231FDF0A0009F448 /* main.cpp in Sources */,
+				68263258231FF1F600DB33D0 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		682A459A231FED3E0076367C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = google_test/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "anschalter.google-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		682A459B231FED3E0076367C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = google_test/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "anschalter.google-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		682A45A6231FED7F0076367C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Unit Test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "anschalter.Unit-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		682A45A7231FED7F0076367C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Unit Test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "anschalter.Unit-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		68F5C2EC231FDF0A0009F448 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -176,11 +371,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /Users/d019141/CLionProjects/GoogleTest/googletest/googletest/include/;
+				LIBRARY_SEARCH_PATHS = /Users/d019141/CLionProjects/GoogleTest/googletest/build/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = "";
 			};
 			name = Debug;
 		};
@@ -229,10 +428,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /Users/d019141/CLionProjects/GoogleTest/googletest/googletest/include/;
+				LIBRARY_SEARCH_PATHS = /Users/d019141/CLionProjects/GoogleTest/googletest/build/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
@@ -255,6 +457,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		682A4599231FED3E0076367C /* Build configuration list for PBXNativeTarget "google_test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				682A459A231FED3E0076367C /* Debug */,
+				682A459B231FED3E0076367C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		682A45A5231FED7F0076367C /* Build configuration list for PBXNativeTarget "Unit Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				682A45A6231FED7F0076367C /* Debug */,
+				682A45A7231FED7F0076367C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		68F5C2E2231FDF0A0009F448 /* Build configuration list for PBXProject "googletest_test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
